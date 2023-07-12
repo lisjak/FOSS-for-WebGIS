@@ -1,0 +1,94 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+            "type": "Feature",
+            "properties": { "name": "lorem", "address": "ipsum" },
+            "geometry": {
+                "coordinates": [-73.95588127116507,
+                    40.736622129426564
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "name": "lorem", "address": "ipsum" },
+            "geometry": {
+                "coordinates": [-73.95468999999875,
+                    40.73511438883315
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "name": "lorem", "address": "ipsum" },
+            "geometry": {
+                "coordinates": [-73.95897000000048,
+                    40.72962813028016
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "name": "lorem", "address": "ipsum" },
+            "geometry": {
+                "coordinates": [-73.95006000000008,
+                    40.72579686925303
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "name": "lorem", "address": "ipsum" },
+            "geometry": {
+                "coordinates": [-73.95971927116265,
+                    40.736588129428924
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "name": "lorem", "address": "ipsum" },
+            "geometry": {
+                "coordinates": [-73.9480899999995,
+                    40.720815605934206
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "name": "lorem", "address": "ipsum" },
+            "geometry": {
+                "coordinates": [-73.95787354232824,
+                    40.73293312987664
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "name": "lorem", "address": "ipsum" },
+            "geometry": {
+                "coordinates": [-73.95197982631204,
+                    40.72961386771041
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": { "name": "lorem", "address": "ipsum" },
+            "geometry": {
+                "coordinates": [-73.96099300000132,
+                    40.732018870013945
+                ],
+                "type": "Point"
+            }
+        }
+    ]
+}
