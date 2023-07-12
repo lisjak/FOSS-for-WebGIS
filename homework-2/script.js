@@ -4,12 +4,10 @@ const key = '7SGo3nVkTl7JQ90xmJ0i';
 // ============ Set Map ============
 const map = L.map('map').setView([40.72897554459544, -73.95037727614574], 15); //starting position
 
-// ============ Set Layers ============
+// ============ Set Maptiler Layers ============
 const mtLayer = L.maptilerLayer({
     style: "https://api.maptiler.com/maps/dataviz-dark/style.json?key=Qx8CiAhWm4RayySUrlIv",
-    // geolocate: true
 }).addTo(map);
-L.control.maptilerGeocoding({ apiKey: key }).addTo(map);
 
 
 // ============ Markers ============
@@ -129,4 +127,4 @@ L.control
         country: ['us'],
         flyTo: true,
     })
-    .addTo(map, 'bottom-left');
+    .addTo(map);
