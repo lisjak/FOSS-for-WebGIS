@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homework 3</title>
 
     <!--  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-      crossorigin=""
-    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel="stylesheet" href="style.css" />
 
     <!-- Scripts –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -21,52 +17,31 @@
 
     <!-- Maplibre -->
     <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/maplibre-gl@3.2.0/dist/maplibre-gl.css"
-    />
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@3.2.0/dist/maplibre-gl.css" />
 
     <!-- Favicon –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗺️</text></svg>"
-    />
-  </head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗺️</text></svg>" />
+</head>
 
-  <body>
+<body>
     <div id="container">
-      <div id="header">
-        <h1>Gentrification in Greenpoint</h1>
-        <h2>
-          <span>
+        <div id="header">
+            <h1>Gentrification in Greenpoint</h1>
+            <h2>
+                <span>
             ⬇️ cultural institutions
 
-            <img
-              src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png"
-              width="15px"
-            />
+            <span class="dot2">
           </span>
-          <br />
-          ⬆️ luxury buildings <span class="dot"></span><br /><br />
-        </h2>
-        <p>
-          Greenpoint is an epicenter of intense and uncontrolled gentrification
-          that has left longtime residents and institutions scrambling for
-          affordable housing. According to a study from NYU’s Furman Center for
-          Real Estate and Urban Policy, the adjoining areas of Williamsburg and
-          Greenpoint were the most rapidly gentrifying neighborhoods in the city
-          between 1990 and 2014. To qualify as gentrified, a neighborhood must
-          meet 2 criteria: (1) it must have been "low income" in 1990, meaning
-          its household income was in the bottom 40 percent of the city’s
-          neighborhoods; and (2) since 1990, the neighborhood’s rents had to
-          have increased faster than the median rate of increase for the city.
-          From 1990 to 2014, average rents citywide "went up about 22.1
-          percent," while rent in Greenpoint "more than tripled that rate of
-          increase, to 78.7 percent." This boom in gentrification was
-          precipiated by a 2005 rezoning change that allowed for the
-          construction of high-rise, luxury buildings in the area.
-          <sup
-            ><a
+                <br /> ⬆️ luxury buildings <span class="dot"></span><br /><br />
+            </h2>
+            <p>
+                Greenpoint is an epicenter of intense and uncontrolled gentrification that has left longtime residents and institutions scrambling for affordable housing. According to a study from NYU’s Furman Center for Real Estate and Urban Policy, the adjoining areas
+                of Williamsburg and Greenpoint were the most rapidly gentrifying neighborhoods in the city between 1990 and 2014. To qualify as gentrified, a neighborhood must meet 2 criteria: (1) it must have been "low income" in 1990, meaning its household
+                income was in the bottom 40 percent of the city’s neighborhoods; and (2) since 1990, the neighborhood’s rents had to have increased faster than the median rate of increase for the city. From 1990 to 2014, average rents citywide "went up
+                about 22.1 percent," while rent in Greenpoint "more than tripled that rate of increase, to 78.7 percent." This boom in gentrification was precipiated by a 2005 rezoning change that allowed for the construction of high-rise, luxury buildings
+                in the area.
+                <sup><a
               href="http://msaag.aag.org/wp-content/uploads/2019/10/3_Holloway-MSG512018F.pdf"
               >[citation]</a
             ></sup
