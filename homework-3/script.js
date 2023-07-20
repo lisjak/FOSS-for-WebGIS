@@ -49,7 +49,7 @@ map.on('load', () => {
 async function main() {
 
     // ============ Cultural Institutions Points============
-    const culturalInstitutions = await axios('./data/cultural-institutions.geojson');
+    const culturalInstitutions = await axios('https://corsproxy.org/?https://raw.githubusercontent.com/lisjak/FOSS-for-WebGIS/main/homework-3/data/cultural-institutions.geojson');
 
     await axios('./data');
 
@@ -104,7 +104,7 @@ async function main() {
     }
 
 
-    const luxuryHousing = await axios('./data/luxury-housing.geojson');
+    const luxuryHousing = await axios('https://corsproxy.org/?https://raw.githubusercontent.com/lisjak/FOSS-for-WebGIS/main/homework-3/data/luxury-housing.geojson');
 
     map.addSource('luxury-housing', {
         'type': 'geojson',
@@ -163,7 +163,7 @@ async function main() {
 
 
     // ============ Greenpoint Polygon ============
-    const greenpointBounds = await axios('./data/greenpoint-bounds.geojson');
+    const greenpointBounds = await axios('https://corsproxy.org/?https://raw.githubusercontent.com/lisjak/FOSS-for-WebGIS/main/homework-3/data/greenpoint-bounds.geojson');
 
     map.addSource('greenpoint-bounds', {
         'type': 'geojson',
