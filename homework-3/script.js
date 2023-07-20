@@ -184,13 +184,3 @@ async function main() {
     addEvents();
     console.log('polygon')
 }
-
-
-
-
-
-// document.getElementById('stop').addEventListener('click', () => {
-//     map.rotateTo((0 / 100) % 1, { duration: 0 });
-//     // Request the next frame of the animation.
-//     // requestAnimationFrame(rotateCamera);
-// })
