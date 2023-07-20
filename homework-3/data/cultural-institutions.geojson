@@ -1,0 +1,74 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+            "type": "Feature",
+            "properties": {
+                "NAME": "Nowy Dziennik Headquarters",
+                "ADDRESS": "144 Franklin St Brooklyn, NY 11222",
+                "DESCRIPTION": "This Polish daily newspaper once was a ubiquitous presence in Greenpoint's Polish shops, but declining circulation forced it to become just a weekly paper. The headquarters moved to New Jersey in 2016. The location is also home to the historic Mechanics and Traders Bank building originally built in 1895. It sold in 2018 to a private real estate entity for 6.5 million dollars."
+
+            },
+            "geometry": {
+                "coordinates": [-73.957322, 40.73019124396132],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Łomzynianka",
+                "ADDRESS": "646 Manhattan Ave Brooklyn, NY 11222",
+                "DESCRIPTION": "Opened for nearly 90 years, it was one of the highest rated and most affordable Polish restaurants in Greenpoint. Closed in 2015, the location has been converted to luxury retail space and sits empty.."
+            },
+            "geometry": {
+                "coordinates": [-73.95073624232808,
+                    40.724433525691474
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "541 Leonard St Church",
+                "ADDRESS": "541 Leonard St Brooklyn, NY 11222",
+                "DESCRIPTION": "Historic church serving the community converted to luxury real estate in 2013. The building sold for $2.8 million in 2021."
+            },
+            "geometry": {
+                "coordinates": [-73.94991558576228,
+                    40.723452970525244
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "New Warsaw Bakery",
+                "ADDRESS": "866 Lorimer St, Brooklyn, NY 11222",
+                "DESCRIPTION": "20-year-old community bakery. Closed in 2014. Replaced with luxury real estate development. As of 2022, units within the new development has sold for more than $2.2 million dollars."
+            },
+            "geometry": {
+                "coordinates": [-73.95105735767191,
+                    40.72276442915792
+                ],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "The Polish Legion of American Veterans - George Washington Post No. 3",
+                "ADDRESS": "535 Leonard St Brooklyn, NY 11222",
+                "DESCRIPTION": "Incorporated in 1945, the establishment served both Polish and American veterans. It was converted to luxury real estate in 2014. Apartment units within the building sold for  $2.9 million in 2021."
+            },
+            "geometry": {
+                "coordinates": [-73.94979454232808,
+                    40.7233331794813
+                ],
+                "type": "Point"
+            }
+
+        }
+    ]
+}
