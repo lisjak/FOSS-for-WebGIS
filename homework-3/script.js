@@ -150,7 +150,7 @@ async function main() {
             <div class='popup-style'>
             <b><a href="${props.LINK}">${props.NAME}</a></b> |
             ${props.ADDRESS}<br>
-            <b>Highest rent:</b> ${props.RENT}
+            <b>Highest rent:</b> ${props.RENT} / month
 
             <br><sub>Data collection date: ${props.DATE}</sub>
 
