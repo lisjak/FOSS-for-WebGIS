@@ -8,11 +8,10 @@ const map = new maplibregl.Map({
     hash: true
 });
 
-// Add zoom and rotation controls to the map.
-map.addControl(new maplibregl.NavigationControl());
-
 map.once('load', main);
 
+// Add zoom and rotation controls to the map.
+map.addControl(new maplibregl.NavigationControl());
 
 map.on('load', () => {
     // Add 3d buildings and remove label layers to enhance the map
@@ -30,34 +29,42 @@ map.on('load', () => {
         'source-layer': 'building',
         'filter': ['==', 'extrude', 'true'],
         'type': 'fill-extrusion',
-
         'paint': {
             'fill-extrusion-color': '#aaa',
-            // 'fill-extrusion-height': 200,
             'fill-extrusion-opacity': 1
         }
     })
 })
 
 
-
-
-
-// ============ Luxury Housing Points============
-// TO DO: accrue more
-// TO DO: color or size grade point according to rent?
+// ============ Greenpoint Polygon ============
 async function main() {
+    let greenpointBounds = await axios('./data/greenpoint-bounds.geojson');
+    map.addSource('greenpoint-src', {
+        'type': 'geojson',
+        'data': greenpointBounds.data
+    });
+
+
+    map.addLayer({
+        'id': 'greenpoint-polygon',
+        'source': 'greenpoint-src',
+        'layout': {},
+        'type': 'fill',
+        'paint': {
+            'fill-color': 'red',
+            'fill-opacity': 0.2,
+            "fill-outline-color": "white",
+        }
+    })
+    console.log('polygon')
 
     // ============ Cultural Institutions Points============
-    const culturalInstitutions = await axios('https://corsproxy.org/?https://raw.githubusercontent.com/lisjak/FOSS-for-WebGIS/main/homework-3/data/cultural-institutions.geojson');
-
-    await axios('./data');
-
+    let culturalInstitutions = await axios('./data/cultural-institutions.geojson');
     map.addSource('cultural-institutions', {
         'type': 'geojson',
         'data': culturalInstitutions.data
     });
-
 
     map.addLayer({
         'id': 'cultural-points',
@@ -101,11 +108,18 @@ async function main() {
                 `
             ).addTo(map).setMaxWidth("350px");
         });
+
+
     }
 
 
-    const luxuryHousing = await axios('https://corsproxy.org/?https://raw.githubusercontent.com/lisjak/FOSS-for-WebGIS/main/homework-3/data/luxury-housing.geojson');
 
+
+    // ============ Luxury Housing Points============
+    // TO DO: accrue more
+    // TO DO: color or size grade point according to rent?
+
+    let luxuryHousing = await axios('./data/luxury-housing.geojson');
     map.addSource('luxury-housing', {
         'type': 'geojson',
         'data': luxuryHousing.data
@@ -147,40 +161,16 @@ async function main() {
             console.log(props)
             popup2.setLngLat(coordinates).setHTML(
                 `
-            <div class='popup-style'>
-            <b><a href="${props.LINK}">${props.NAME}</a></b> |
-            ${props.ADDRESS}<br>
-            <b>Highest rent:</b> ${props.RENT} / month
+                <div class='popup-style'>
+                <b><a href="${props.LINK}">${props.NAME}</a></b> |
+                ${props.ADDRESS}<br>
+                <b>Highest rent:</b> ${props.RENT} / month
 
-            <br><sub>Data collection date: ${props.DATE}</sub>
+                <br><sub>Data collection date: ${props.DATE}</sub>
 
-            `
+                `
             ).addTo(map);
             console.log('popup house')
         });
     }
-
-
-
-    // ============ Greenpoint Polygon ============
-    const greenpointBounds = await axios('https://corsproxy.org/?https://raw.githubusercontent.com/lisjak/FOSS-for-WebGIS/main/homework-3/data/greenpoint-bounds.geojson');
-
-    map.addSource('greenpoint-bounds', {
-        'type': 'geojson',
-        'data': greenpointBounds.data
-    });
-
-    map.addLayer({
-        'id': 'greenpoint-polygon',
-        'source': 'greenpoint-bounds',
-        'layout': {},
-        'type': 'fill',
-        'paint': {
-            'fill-color': 'red',
-            'fill-opacity': 0.2,
-            "fill-outline-color": "white",
-        }
-    })
-    addEvents();
-    console.log('polygon')
 }

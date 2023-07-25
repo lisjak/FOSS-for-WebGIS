@@ -192,6 +192,5 @@ async function main() {
         }
     });
 
-    // addEvents();
 
 }
