@@ -2,7 +2,14 @@
     "type": "FeatureCollection",
     "features": [{
             "type": "Feature",
-            "properties": { "name": "lorem", "address": "ipsum" },
+            "properties": {
+                "NAME": "53 Clay St.",
+                "ADDRESS": "53 Clay St, Brooklyn, NY 11222",
+                "RENT": "$6,500",
+                "LINK": "/",
+                "DATE": "07/19/23"
+
+            },
             "geometry": {
                 "coordinates": [-73.95588127116507,
                     40.736622129426564
@@ -12,7 +19,12 @@
         },
         {
             "type": "Feature",
-            "properties": { "name": "lorem", "address": "ipsum" },
+            "properties": {
+                "NAME": "150 Eagle",
+                "ADDRESS": "150 Eagle St, Brooklyn, NY 11222",
+                "RENT": "$6,000",
+                "LINK": "https://streeteasy.com/building/150-eagle-street-brooklyn_#tab_building_detail=3"
+            },
             "geometry": {
                 "coordinates": [-73.95468999999875,
                     40.73511438883315
@@ -22,7 +34,13 @@
         },
         {
             "type": "Feature",
-            "properties": { "name": "lorem", "address": "ipsum" },
+            "properties": {
+                "NAME": "50 Greenpoint",
+                "ADDRESS": "50 Greenpoint Ave, Brooklyn, NY 11222",
+                "RENT": "$9,750",
+                "LINK": "https://streeteasy.com/building/50-greenpoint-avenue-brooklyn#tab_building_detail=3",
+                "DATE": "07/19/23"
+            },
             "geometry": {
                 "coordinates": [-73.95897000000048,
                     40.72962813028016
@@ -32,17 +50,13 @@
         },
         {
             "type": "Feature",
-            "properties": { "name": "lorem", "address": "ipsum" },
-            "geometry": {
-                "coordinates": [-73.95006000000008,
-                    40.72579686925303
-                ],
-                "type": "Point"
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": { "name": "lorem", "address": "ipsum" },
+            "properties": {
+                "NAME": "Two Blue Slip",
+                "ADDRESS": "2 Blue Slip, Brooklyn, NY 11222",
+                "RENT": "$7,730",
+                "LINK": "https://streeteasy.com/building/two-blue-slip",
+                "DATE": "07/19/23"
+            },
             "geometry": {
                 "coordinates": [-73.95971927116265,
                     40.736588129428924
@@ -52,7 +66,13 @@
         },
         {
             "type": "Feature",
-            "properties": { "name": "lorem", "address": "ipsum" },
+            "properties": {
+                "NAME": "Northpoint Towers",
+                "ADDRESS": "76 Engert Avenue, Brooklyn, NY, 11222",
+                "RENT": "$8,050",
+                "LINK": "https://streeteasy.com/building/northpoint-towers#tab_building_detail=3",
+                "DATE": "07/19/23"
+            },
             "geometry": {
                 "coordinates": [-73.9480899999995,
                     40.720815605934206
@@ -62,17 +82,13 @@
         },
         {
             "type": "Feature",
-            "properties": { "name": "lorem", "address": "ipsum" },
-            "geometry": {
-                "coordinates": [-73.95787354232824,
-                    40.73293312987664
-                ],
-                "type": "Point"
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": { "name": "lorem", "address": "ipsum" },
+            "properties": {
+                "NAME": "308 Eckford Street",
+                "ADDRESS": "308 Eckford Street, Brooklyn, NY, 11222",
+                "RENT": "$9,795",
+                "LINK": "https://streeteasy.com/building/308-eckford-street-brooklyn#tab_building_detail=3",
+                "DATE": "07/19/23"
+            },
             "geometry": {
                 "coordinates": [-73.95197982631204,
                     40.72961386771041
@@ -82,13 +98,20 @@
         },
         {
             "type": "Feature",
-            "properties": { "name": "lorem", "address": "ipsum" },
+            "properties": {
+                "NAME": "The Greenpoint",
+                "ADDRESS": "21 India Street, Brooklyn, NY, 11222",
+                "RENT": "$12,000",
+                "LINK": "https://streeteasy.com/building/the-greenpoint",
+                "DATE": "07/19/23"
+            },
             "geometry": {
                 "coordinates": [-73.96099300000132,
                     40.732018870013945
                 ],
                 "type": "Point"
             }
+
         }
     ]
 }

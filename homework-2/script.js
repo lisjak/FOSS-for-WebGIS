@@ -85,7 +85,6 @@ marker5.on('click', function(e) {
 // ============ Luxury Housing Points============
 // TO DO: accrue more, add address name and rent to data
 // TO DO: color grade point according to rent
-// TO DO: onClick (on hover?) display name and rent
 axios('./data/luxury-housing.geojson').then(resp => {
     var geojsonMarkerOptions = {
         radius: 6,
@@ -102,9 +101,13 @@ axios('./data/luxury-housing.geojson').then(resp => {
 
 
             return L.circleMarker(latlng, geojsonMarkerOptions);
+        },
+        onEachFeature: function(feature, layer) {
+            layer.bindPopup(`<b>${feature.properties.NAME}</b> ${feature.properties.RENT}/month`);
         }
 
-    }).addTo(map).bringToFront().bindPopup(`<b>lorem</b> ipsum`);
+    }).addTo(map).bringToFront();
+
 })
 
 // ============ Greenpoint Polygon ============
