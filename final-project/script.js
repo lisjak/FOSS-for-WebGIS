@@ -1,3 +1,6 @@
+const slider = document.getElementById('slider');
+const sliderValue = document.getElementById('slider-value');
+
 // ============ Set Map ============
 const map = new maplibregl.Map({
     container: 'map',
@@ -41,7 +44,24 @@ map.on('load', () => {
     })
 })
 
-
+map.on('load', function() {
+    const targets = {
+        warsawGhettoArea: "Warsaw Ghetto Area",
+        nyc: "Map 1"
+            // water: "Water",
+            // building: "Building",
+            // airport: "Airport",
+            // poi: "Pois",
+    };
+    const options = {
+        title: "Controls",
+        showDefault: true,
+        showCheckbox: true,
+        onlyRendered: false,
+        reverseOrder: true
+    };
+    map.addControl(new MaplibreLegendControl.MaplibreLegendControl(targets, options), "bottom-right");
+});
 
 
 
@@ -171,26 +191,92 @@ console.log('hi1')
 map.once('load', main);
 
 async function main() {
-    let greenpointGeojson = await axios('./data/greenpoint-bounds.geojson');
-    map.addSource('greenpoint-src', {
+    let warsawGhettoGeojson = await axios('./data/warsaw-ghetto-bounds.geojson');
+    map.addSource('warsaw-ghetto-src', {
         'type': 'geojson',
-        'data': greenpointGeojson.data
+        'data': warsawGhettoGeojson.data
     });
 
 
     map.addLayer({
-        'id': 'greenpoint-polygon',
+        'id': 'warsawGhettoArea',
         'type': 'line',
-        'source': 'greenpoint-src',
+        'source': 'warsaw-ghetto-src',
         'layout': {
-            'line-join': 'round',
-            'line-cap': 'round'
+            'line-join': 'miter',
+            'line-cap': 'square'
         },
         'paint': {
             'line-color': 'red',
             'line-width': 8
         }
     });
-
-
 }
+
+
+
+map.once('load', () => {
+    map.addSource('historical-nyc-src', {
+        "type": "image",
+        "url": "../7-19/site/historical-maps-of-manhattan.jpg",
+        "coordinates": [
+            [
+                20.968276171051343,
+                52.25631970320245
+            ],
+            [
+                21.007894660289338,
+                52.25347267685359
+            ],
+            [
+                20.998765182334296,
+                52.21866092056342
+            ],
+            [
+                20.9600079646018,
+                52.22203780149027
+            ]
+        ]
+    });
+
+    map.addLayer({
+        'id': 'nyc',
+        'source': 'historical-nyc-src',
+        'type': 'raster'
+    });
+
+    slider.addEventListener('input', (e) => {
+        // Adjust the layers opacity. layer here is arbitrary - this could
+        // be another layer name found in your style or a custom layer
+        // added on the fly using `addSource`.
+        map.setPaintProperty(
+            'nyc',
+            'raster-opacity',
+            parseInt(e.target.value, 10) / 100
+        );
+
+        //     // Value indicator
+        //     sliderValue.textContent = e.target.value + '%';
+        // });
+
+        // let distancePnts = [];
+        // let markers = [];
+
+        // map.on('click', (e) => {
+        //     if (markers.length > 1) {
+        //         markers.forEach(m => m.remove());
+        //         markers = [];
+        //     }
+
+        //     markers.push(new maplibregl.Marker()
+        //         .setLngLat(e.lngLat)
+        //         .addTo(map));
+        //     distancePnts.push(turf.point([e.lngLat.lng, e.lngLat.lat]))
+        //     if (distancePnts.length < 2) return;
+        //     let options = { units: 'miles' };
+        //     let distance = turf.distance(distancePnts[0], distancePnts[1], options);
+        //     console.log(distance);
+        //     distancePnts = [];
+    });
+
+});
