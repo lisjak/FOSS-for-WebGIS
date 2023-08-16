@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Final Project</title>
 
     <!--  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
     <link rel="stylesheet" href="style.css" />
 
     <!-- Scripts –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -17,82 +21,439 @@
 
     <!-- Maplibre -->
     <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@3.2.0/dist/maplibre-gl.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/maplibre-gl@3.2.0/dist/maplibre-gl.css"
+    />
 
     <!-- maplibre-gl-legend -->
     <script src="https://www.unpkg.com/@watergis/maplibre-gl-legend@latest/dist/maplibre-gl-legend.umd.js"></script>
-    <link href="https://www.unpkg.com/@watergis/maplibre-gl-legend@latest/dist/maplibre-gl-legend.css" rel="stylesheet" />
+    <link
+      href="https://www.unpkg.com/@watergis/maplibre-gl-legend@latest/dist/maplibre-gl-legend.css"
+      rel="stylesheet"
+    />
 
     <!-- Favicon –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗺️</text></svg>" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗺️</text></svg>"
+    />
 
     <!-- Fonts–––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Handjet&IBM+Plex+Mono:ital&family=Iceberg&display=swap" rel="stylesheet" />
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handjet&IBM+Plex+Mono:ital&family=Iceberg&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <div id="wrapper">
-        <div id="header">
-            <h1>Transposing Past & Present: The Warsaw Ghetto</h1>
+      <div id="container">
+        <div id="left-body">
+          <div id="head">
+            DHUM 70600: FOSS for Web GIS | CUNY Graduate Center | Summer '23
+          </div>
+
+          <a href="/">
+            <h1>Transposing Past & Present</h1>
+          </a>
+          <div class="subtitle">
+            <h3>
+              How Acts of Housing Injustice During World War II Continue to Echo
+              in Contemporary Poland and Beyond
+            </h3>
+          </div>
+          <h2>Creating Spatial Narratives of the Past</h2>
+          <h4>
+            <span class="quote">“</span>
+            <span>
+              Listen, child. Do you know if there was bread in the ghetto?
+              Because if you don't know [the anwser], you'll never understand
+              why thousands of people voluntarily left for Treblinka
+              [extermination camp].
+            </span>
+            <span class="quote-right">”</span>
+            <span class="author"
+              >⸺ Marek Edelman <a href="#citations">[1]</a></span
+            >
+          </h4>
+          <p>
+            <b>
+              Harrie Teunissen, a Dutch map collector/curator and "forerunner in
+              the upcoming field of contemporary map research," characterizes
+              the Holocaust as "largely a spatial history."
+            </b>
+            He quotes Elie Wiesel as stating, "The Nazis' aim was to make the
+            Jewish universe shrink" and elaborates that "this aim required a
+            process of reducing multiple and often mixed spheres of identity to
+            [binary] Jewish versus non-Jewish spaces."
+            <a href="#citations">[2]</a> As such, it comes with little surprise
+            that "housing and Jewish persecution were increasingly intertwined"
+            during German occupation. <a href="#citations">[3]</a> In "Housing,
+            Hiding and the Holocaust", authors Tönsmeyer and von Puttkamer note
+            "that accommodation became a scarce commodity [alongside] collapsing
+            housing markets in [occupied countries such as] France, the
+            Netherlands, Norway and Poland," the latter of which is the focus of
+            this mapping project. War damage and building requisitions by
+            occupying Germans further exacerbated poor and cramped housing
+            conditions. <br /><br />
+            <b>
+              However, it was the Jewish population that was "worst hit by
+              housing restrictions, even prior to ghettoization."
+            </b>
+            Abandoned apartments formerly belonging to fleeing Jewish residents
+            were looted and appropriated by local non-Jewish populations and
+            German occupiers. Pressures on housing conditions exerted by German
+            war-time occupation "accelerated the marginalization and exclusion
+            of local Jewish populations" by both occupiers and other occupied
+            peoples. Under imposed hierarchies, those living under occupation
+            improvised "their own moral economies" that were significantly
+            influenced by housing insecurity and the desire for property
+            ownership. <a href="#citations">[4]</a> <br /><br />
+            <b>
+              Eventual ghettoization enacted by German occupiers was a pivotal
+              step step in the Nazi process of brutally separating, persecuting,
+              murdering, and ultimately further displacing much of Europe's
+              Jewish population.
+            </b>
+            The largest ghetto established by Nazis was the Warsaw Ghetto in
+            occupied Poland, which this project focuses on. In Warsaw, more than
+            400,000 Jews were crowded into an area of 1.3 square miles of
+            abysmal housing conditions. Near the end of the war, ghettos served
+            as deportation hubs to labor and extermination camps.
+            <a href="#citations">[5]</a>
+          </p>
+          <h2>Connecting Them to The Present</h2>
+          <h4>
+            <span class="quote">“</span>
+            <span>
+              The identity of Warsaw is built on two things: resistance during
+              the war and rebuilding after the war. Warsaw was supposed to be
+              the phoenix from the ashes, but they took it from us, they
+              privatised it, and they told us this effort was worth nothing.
+            </span>
+            <span class="quote-right">”</span>
+            <span class="author"
+              >⸺ Jan Śpiewak <a href="#citations">[6]</a>
+            </span>
+          </h4>
+          <p>
+            <b>
+              By the end of the war, 90% of Warsaw had been obliterated by
+              German mass bombings, heavy artillery fire, and planned demolition
+              campaigns as well as other structural damage inflicted by Allies.
+            </b>
+            <a href="#citations">[7]</a> Throughout the course of the war, 40 to
+            60 million people became homeless or displaced in Europe.
+            <a href="#citations">[8]</a> Soviet control immediately followed.
+            Poland’s new communist authorities issued the Bierut Decree which
+            "facilitated the city’s reconstruction [by transferring] ownership
+            of all land within the city’s prewar borders to the municipal
+            authorities." <br /><br />
+            <b
+              >Since the fall of communism, Warsaw city authorities have been
+              "flooded with thousands of claims – both bogus and legitimate –
+              for the restitution of property and plots of land throughout the
+              city," which has upheaved the housing landscape in contemporary
+              Warsaw.
+            </b>
+            Authorities have been accused of colluding with property developers
+            to exploit loopholes in the system, and subsequently "undo the
+            collective achievements of the city’s postwar reconstruction." While
+            some view the complicated topic of reprivitization as righting
+            historical wrongs, it has had serious negative effects on the city.
+            Because reprivatization claims are based on land plots as they
+            existed in pre-war Warsaw, they inaccurately align with post-war
+            structures and spaces. As such, school playgrounds have been
+            reprivatized and turned into "weed-laden car parks." Former public
+            green spaces lie untended, and buildings remain empty and decaying
+            due to uncertainty over their ownership. Additionally, claims to
+            property are further complicated by the fact that they can be bought
+            and sold on the open market, often resulting in swindling and fraud.
+            <a href="#citations">[9]</a> <br /><br />
+            <b>
+              Those most affected by the reprivatization process are tenants of
+              formerly city-owned buildings that have been transferred into
+              private owners' hands.
+            </b>
+            Suddenly, "thousands of people living in rent-controlled properties
+            are faced with private landlords that had little incentive or desire
+            to keep them there." The problem is especially acute in central
+            Warsaw, where the communist authorities concentrated social housing,
+            but which has since become a prime location for trendy and luxury
+            real estate. Consequently, the Polish housing crisis continues to
+            grow. A two-person apartment to rent in Warsaw costs ~3,300zł (or
+            $814.73) today, which is just shy of the monthly minimum wage of
+            3,490zł ($861.64). In the last five years, rent has risen 58% in
+            Warsaw. Attitudes of government officials and even many private
+            citizens reflect anti-communist ideologies and often reject
+            initiatives for social housing that harken back to Soviet Poland.<a
+              href="#citations"
+              >[10]</a
+            >
+            <br /><br />
+            <b>
+              Poland, once again, is in crisis and sitting on the geographical
+              edge of war. Vulnerable people including both Polish citizens and
+              international refugees have been left to fend for themselves and
+              have often been forced into taking desperate measures, with many
+              turning to squatting in derelict buildings.
+            </b>
+            <a href="#citations">[11]</a> Tenants advocating for their rights
+            have been met with harassment, violence, and perhaps even death.
+            This is the apparent case for Jolanta Brzeska, a tenant widely
+            thought to have been killed by developers trying to remove her from
+            her from her home after ownership was granted to three historical
+            heirs and a notorious property claims dealer.
+            <a href="#citations">[12]</a> Finally free from occupation, Poland
+            has the opportunity to empower those living within its borders; the
+            painful echoes reverberating from the calamitous housing landscape
+            of World War II can, at last, be mitigated and the suffering of
+            those afflicted may be honored.
+          </p>
+
+          <h2>About This Project</h2>
+
+          <h3>Purpose</h3>
+          <p>
+            <b>
+              This project is timely as this year is the 80th anniversary of The
+              Warsaw Ghetto Uprising, and it calls attention to the complicated
+              and often unjust historic and modern landscape related to housing.
+            </b>
+            In "Cartographies of Catastrophe: Mapping World War II Destruction
+            in Germany and Poland," Jerzy Elżanowski and Carmen M. Enss note
+            that qualitative analyses of post-catastrophic-damage cartography
+            constitute "a serious research gap in the field of urban history."
+            <a href="#citations">[13]</a> This project aspires to help fill that
+            gap in some capacity in addition to honoring the memories of those
+            who have and those who continue to struggle with suffering
+            associated with housing.
+          </p>
+
+          <div class="inspiration">
+            <h3>Inspiration and Acknowledgements</h3>
+            <p>
+              <b>
+                For my previous homework assignments in this course, (<a
+                  href="https://lisjak.github.io/FOSS-for-WebGIS/homework-1/"
+                  >Homework 1</a
+                >,
+                <a href="https://lisjak.github.io/FOSS-for-WebGIS/homework-1/"
+                  >Homework 2</a
+                >,
+                <a href="https://lisjak.github.io/FOSS-for-WebGIS/homework-1/"
+                  >Homework 3</a
+                >) as well as projects in other courses, I have investigated
+                gentrification in Greenpoint, a historically Polish ethnic
+                enclave in Brooklyn.
+              </b>
+              In these assignments, I have noted the increase of luxury housing
+              and decrease of cultural institutions in the neighborhood. For my
+              final project, I chose to continue focusing on housing and the
+              relationship between the past and present. However, I decided to
+              turn my focus to Poland and to center on the site of the former
+              The Warsaw Ghetto and it’s surrounding areas. <br /><br />
+              <b>
+                For my final project, I am drawing inspiration from photography
+                projects (<a
+                  href="https://miro.com/app/board/uXjVMzkSJuQ=/?moveToWidget=3458764560261412650&cot=14"
+                  >Inspiration #1</a
+                >,
+                <a
+                  href="https://www.thefirstnews.com/article/then-and-now-pics-of-warsaw-ghetto-brings-fresh-perspective-on-tragic-history-8727"
+                  >Inspiration #2</a
+                >, <a href="https://pawelstarzec.com/Anew">Inspiration #3</a>)
+                that have combined past and present moments of Poland together.
+              </b>
+              I have geolocated historic photos of The Warsaw Ghetto and
+              juxtapose them with views of contemporary sites of displacement,
+              such as reprivatized blocks and luxury housing. Additionally, I
+              have chosen to overlay a historic map onto the digital map as
+              another means of combining past and present moments by unifying
+              contemporary digital mapping with its traditional analog
+              counterpart. Furthermore, I used MapLibre for it’s extrusion
+              feature to display 3D buildings and contrasted that against the
+              historic data.
+            </p>
+          </div>
+
+          <div class="tech">
+            <h3>Technologies</h3>
+            <p>
+              <b>Basemap</b>
+              <br />
+              Basemap 1: <a href="https://maplibre.org/">MapLibre</a> <br />
+              Basemap 2:
+              <a
+                href="https://www.maptiler.com/maps/#style=streets-v2&mode=2d&position=15.18/40.70882/-74.00759/33.60/66.7"
+                >MapTiler 3D Building Extrusion</a
+              ><br />
+            </p>
+            <p>
+              <b>Data</b><br />
+              Historical map:
+              <a href="http://www.siger.org/holocaustincontemporarymaps/"
+                >Wehrmacht Warsaw Ghetto Map military map, 1939</a
+              >
+              <br />
+              Polygon:
+              <a
+                href="https://www.google.com/maps/d/viewer?mid=1gpeMQxwHl805uUe-W1lmfX3i74w&hl=en&ll=52.24272841406217%2C20.98887849999999&z=14"
+                >Warsaw Ghetto bounds </a
+              ><br />
+              Circles: Warsaw Ghetto moments; contemporary luxury housing (see
+              individual points for sources)
+              <br />
+            </p>
+            <p>
+              <b>Functionality</b> <br />
+              Slider <br />
+              Control Panel/Key<br />
+              Zoom/pan/tilt<br />
+              Popup
+            </p>
+          </div>
+
+          <div id="citations">
+            <h3>Citations</h3>
+
+            <p>
+              [1]
+              <a
+                href="http://www.lodubienka.pl/images/PDF/dokumenty/2020/2020_21/KL_3/polski/jpolskikl323022021.pdf"
+                >Krall, H. (1977).
+                <i>Zdążyć przed Panem Bogiem. Wydawnictwo literackie.</i>
+              </a>
+              <br />
+              [2]
+              <a
+                href="https://www.ehri-project.eu/interview-harrie-teunissen-map-collector"
+                >European Holocaust Research Infrastructure. (2014).
+                <i
+                  >'The Holocaust Is Largely a Spatial History': Interview with
+                  Harrie Teunissen, Map Collector.</i
+                >
+                https://www.ehri-project.eu/interview-harrie-teunissen-map-collector
+              </a>
+              <br />
+              [3]
+              <a
+                href="https://www.semanticscholar.org/paper/Home-as-a-Site-of-Exclusion%3A-The-Nazi-Occupation%2C-Fogg/f64c573e522d8441c610f6d10254b264025b7cd3"
+                >Fogg, S. L. (2022).
+                <i
+                  >Home as a site of exclusion: The Nazi occupation, housing
+                  shortages and the Holocaust in France.</i
+                >
+                Journal of Modern European History, 20(2), 167–182.
+                https://doi.org/10.1177/16118944221095134
+              </a>
+              <br />
+              [4]
+              <a
+                href="https://journals.sagepub.com/doi/epdf/10.1177/16118944221095133"
+                >Tönsmeyer, T., &amp; von Puttkamer, J. (2022).
+                <i>Housing, hiding and the Holocaust.</i> Journal of Modern
+                European History, 20(2), 161–166.
+                https://doi.org/10.1177/16118944221095133
+              </a>
+              <br />
+              [5]
+              <a
+                href="https://encyclopedia.ushmm.org/index.php/content/en/article/ghettos"
+                >United States Holocaust Memorial Museum. (n.d.).
+                <i>United States Holocaust Memorial Museum | Ghettos.</i>
+                https://encyclopedia.ushmm.org/index.php/content/en/article/ghettos
+              </a>
+              <br />
+              [6] [9]
+              <a
+                href="https://www.theguardian.com/cities/2017/dec/18/stole-city-soul-warsaw-reprivatisation-chaos"
+              >
+                Davies, C. (2017). "'They stole the soul of the city': How
+                Warsaw’s reprivatisation is causing chaos." The Guardian News
+                and Media.
+                https://www.theguardian.com/cities/2017/dec/18/stole-city-soul-warsaw-reprivatisation-chaos
+              </a>
+              <br />
+              [7]
+              <a href="https://culture.pl/en/article/warsaw-everything-that-was"
+                >Konradova, N. (2023).
+                <i>Warsaw: Everything that was.</i> Culture.pl.
+                https://culture.pl/en/article/warsaw-everything-that-was
+              </a>
+              <br />
+              [8]
+              <a href="https://www.fmreview.org/destination-europe/bundy"
+                >Bundy, C. (2016).
+                <i>Migrants, refugees, history and precedents</i> | Forced
+                Migration Review".
+                https://www.fmreview.org/destination-europe/bundy
+              </a>
+              <br />
+              [10]
+              <a
+                href="https://notesfrompoland.com/2023/03/31/poland-is-facing-a-housing-crisis-but-politicians-are-offering-the-same-failed-solutions/"
+                >Kość, W. (2023). "Poland is facing a housing crisis, but
+                politicians are offering the same failed solutions." Notes From
+                Poland.
+                https://notesfrompoland.com/2023/03/31/poland-is-facing-a-housing-crisis-but-politicians-are-offering-the-same-failed-solutions/
+              </a>
+              <br />
+              [12]
+              <a
+                href="https://balkaninsight.com/2023/03/21/desperate-measures-as-housing-crisis-grips-poland/"
+                >Ciobanu, C. (2023). "Desperate measures as housing crisis grips
+                Poland." Balkan Insight.
+                https://balkaninsight.com/2023/03/21/desperate-measures-as-housing-crisis-grips-poland/
+              </a>
+              <br />
+              [12]
+              <a
+                href="https://tvn24.pl/tvn24-news-in-english/tenth-anniversary-of-warsaw-tenants-activist-jolanta-brzeska-5032812"
+                >G.F. (2021). "Ten years after Warsaw activist Jolanta Brzeska’s
+                unsolved death."" TVN24.
+                https://tvn24.pl/tvn24-news-in-english/tenth-anniversary-of-warsaw-tenants-activist-jolanta-brzeska-5032812
+              </a>
+              <br />
+              [13]
+              <a
+                href="https://www.cambridge.org/core/journals/urban-history/article/abs/cartographies-of-catastrophe-mapping-world-war-ii-destruction-in-germany-and-poland/1FA260C8F755005A1D4F8F3071A9F57E"
+                >Elżanowski, J., &amp; Enss, C. M. (2021).
+                <i
+                  >Cartographies of catastrophe: Mapping World War II
+                  Destruction in Germany and Poland.</i
+                >
+                Urban History, 49(3), 589–611.
+                https://doi.org/10.1017/s0963926820000772
+              </a>
+              <br />
+            </p>
+          </div>
+
+          <div id="footer"><a href="https://github.com/lisjak">LNJ</a></div>
         </div>
 
-        <div id="container">
-            <div id="left-body">
-                <div id="head">
-                    DHUM 70600: FOSS for Web GIS | CUNY Graduate Center | Summer '23
-                </div>
-                <a href="/">
-                    <h1>Transposing Past & Present</h1>
-                </a>
-                <div class="subtitle">
-                    <h3>Lorem Lorem Lorem</h3>
-                </div>
-                <h2>The Spatial History of the Holocaust</h2>
-
-                <p>
-                    Harrie Teunissen, a Dutch map collector and curator as well as "forerunner in the upcoming field of contemporary map research," characterizes the Holocaust as "largely a spatial history."
-                </p>
-                <h2>Lorem Ipsum</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-
-                <h2>About This Project</h2>
-
-                <h3>Inspiration and Acknowledgements</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-
-                <h3>Citations</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-
-                <h3>Technologies</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-
-            <div id="map"></div>
-            <div class="map-overlay top">
-                <div class="map-overlay-inner">
-                    <div class="maplibregl-legend-title-label">Opacity</div>
-                    <label>Layer opacity: <span id="slider-value">100%</span></label>
-                    <input id="slider" type="range" min="0" max="100" step="0" value="100" />
-                </div>
-            </div>
+        <div id="map"></div>
+        <div class="map-overlay top">
+          <div class="map-overlay-inner">
+            <div class="maplibregl-legend-title-label">Opacity</div>
+            <!-- <label>Layer opacity: <span id="slider-value">100%</span></label> -->
+            <input
+              id="slider"
+              type="range"
+              min="0"
+              max="100"
+              step="0"
+              value="50"
+            />
+          </div>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 
-<script src="./script.js"></script>
-
+  <script src="./script.js"></script>
 </html>

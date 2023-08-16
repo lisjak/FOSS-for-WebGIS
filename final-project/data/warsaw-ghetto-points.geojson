@@ -1,0 +1,88 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+            "type": "Feature",
+            "properties": {
+                "NAME": "18 Zamenhofa Street",
+                "ADDRESS": "Ludwika Zamenhofa 18",
+                "DESCRIPTION": "A street armband seller and a group of pedestrians on 18 Zamenhofa Street (probably) in the ghetto, summer 1941.",
+                "SOURCE_THEN": "https://www.iwm.org.uk/collections/item/object/205395065",
+                "IMAGE_THEN": "./data/photos/18-Zamenhofa.jpg"
+            },
+            "geometry": {
+                "coordinates": [20.993383355403015, 52.25130460008016],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Leszno Street",
+                "ADDRESS": "aleja Solidarności 86",
+                "DESCRIPTION": "Street rickshaws and a tramcar mounted with a Star of David above the driver’s cabin carrying passengers along Leszno Street in the ghetto, summer 1941. This particular tramline was run between the Muranowski Square and the Grzybowska Street. According to City Hall sources, it would have been used to transport Jews to the Umschlagplatz as they awaited deportation to the gas chambers of Treblinka.",
+                "SOURCE_THEN": "https://www.iwm.org.uk/collections/item/object/205234846",
+                "IMAGE_THEN": "./data/photos/Leszno.jpg"
+            },
+            "geometry": {
+                "coordinates": [20.99145299994067, 52.24134916533383],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": " Żelazna and Chłodna Streets",
+                "ADDRESS": "Chłodna 00-867",
+                "DESCRIPTION": "Jewish pedestrians crossing the road at the intersection of Żelazna and Chłodna (Grubenstrasse) Streets in the ghetto. The bar in the background is called `Bar dla wszystkich - Bar for Everyone`.",
+                "SOURCE_THEN": "https://www.iwm.org.uk/collections/item/object/205395227",
+                "IMAGE_THEN": "./data/photos/Zelazna.jpg"
+            },
+            "geometry": {
+                "coordinates": [20.989207338786567, 52.23722604805455],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "St. Zofia Hospital",
+                "ADDRESS": "Nowolipie 17",
+                "DESCRIPTION": "Jewish people captured by the SS during the suppression of the Warsaw ghetto uprising march past the St. Zofia hospital down Nowolipie Street towards the Umschlagplatz for deportation.",
+                "SOURCE_THEN": "https://collections.ushmm.org/search/catalog/pa13704",
+                "IMAGE_THEN": "./data/photos/Nowolipie.jpeg"
+            },
+            "geometry": {
+                "coordinates": [20.993621073721535, 52.243752352747165],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Solidarnosci Street",
+                "ADDRESS": "Żelazna 84",
+                "DESCRIPTION": "The forced resettlement of Jews from villages and small cities in Warsaw District to the Warsaw ghetto. This photo was taken near the crossing of Zelazna and Solidarnosci streets.",
+                "SOURCE_THEN": "https://www.npr.org/sections/goatsandsoda/2020/09/02/908732924/the-warsaw-ghetto-can-teach-the-world-how-to-beat-back-an-outbreak",
+                "IMAGE_THEN": "./data/photos/Solidarnosci.jpg"
+            },
+            "geometry": {
+                "coordinates": [20.98704992164508, 52.23984258716197],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Niska Street",
+                "ADDRESS": "18 Niska",
+                "DESCRIPTION": "SS troops force Jewish families to vacate an apartment building during the suppression of the Warsaw ghetto uprising. ",
+                "SOURCE_THEN": "https://commons.wikimedia.org/wiki/Category:Warsaw_Ghetto_photos_from_Niska_Street#/media/File:Stroop_Collection_-_Warsaw_Ghetto_Uprising_-_Niska_Street_-_1.jpg",
+                "IMAGE_THEN": "./data/photos/Niska.jpg"
+            },
+            "geometry": {
+                "coordinates": [20.983977417999654, 52.24989784731603],
+                "type": "Point"
+            }
+        }
+    ]
+}

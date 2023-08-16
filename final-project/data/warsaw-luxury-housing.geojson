@@ -1,0 +1,95 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+            "type": "Feature",
+            "properties": {
+                "NAME": "Nowak matute",
+                "ADDRESS": "Daniłowiczowska 9/lok 300 - 084 Warszawa ",
+                "RENT": "40000",
+                "LINK": "https://www.flatio.com/rent/apartment/warsaw-22223"
+            },
+            "geometry": {
+                "coordinates": [21.007752701858482, 52.24490887394816],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Złota 44",
+                "ADDRESS": "Złota 44, 00-120 Śródmieście,  Warszawa",
+                "RENT": "40000",
+                "LINK": "https://rentola.pl/en/listings/flat-warszawa-srodmiescie-zlota-st-6d872e"
+            },
+            "geometry": {
+                "coordinates": [21.002385489406752, 52.23114127642459],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "ulica Niska 10-10",
+                "ADDRESS": "ulica Niska 10-10, 00-176, Muranów, Śródmieście, Warszawa,",
+                "RENT": "35955",
+                "LINK": "https://rentola.pl/en/listings/2-room-flat-niska-street-no-10-fa9e14"
+            },
+            "geometry": {
+                "coordinates": [20.98774895718584, 52.25131351308162],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "rondo Zgrupowania AK Radosław",
+                "ADDRESS": "rondo Zgrupowania AK Radosław - Śródmieście, Warszawa,",
+                "RENT": "40000",
+                "LINK": "https://rentola.pl/en/listings/flat-warszawa-srodmiescie-rondo-zgrupowania-ak-radoslaw-st-a2b486"
+            },
+            "geometry": {
+                "coordinates": [20.983853595294942, 52.25440271847149],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "ulica Drewniana 10-16",
+                "ADDRESS": "ulica Drewniana 10-16, 00-345, Powiśle, Śródmieście, Warszawa",
+                "RENT": "50000",
+                "LINK": "https://rentola.pl/en/listings/mieszkanie-do-wynajecia-w-warszawa-ul-drewniana-srodmiescie-powisle-a4fb3e"
+            },
+            "geometry": {
+                "coordinates": [21.025000590157724, 52.23965898640784],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "ulica Wiejska, 00-479",
+                "ADDRESS": "ulica Wiejska, 00-479, Śródmieście Południowe, Śródmieście, Warszawa",
+                "RENT": "40000",
+                "LINK": "https://rentola.pl/en/listings/apartment-for-rent-in-srodmiescie-ul-wiejska-poland-9b96cd"
+            },
+            "geometry": {
+                "coordinates": [21.023993632740016, 52.227819903366296],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Grzybowska 4",
+                "ADDRESS": "Grzybowska 4, 00-131 Warszawa, Poland",
+                "RENT": "10500",
+                "LINK": "https://primepropertypoland.com/property/to-rent-luxury-3-room-apartment-on-grzybowska-4-warsaw/"
+            },
+            "geometry": {
+                "coordinates": [21.001433215928458, 52.237399207809865],
+                "type": "Point"
+            }
+        }
+    ]
+}

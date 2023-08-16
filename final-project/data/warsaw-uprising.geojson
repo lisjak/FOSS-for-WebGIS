@@ -1,0 +1,32 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+            "type": "Feature",
+            "properties": {
+                "NAME": "The Prudential Building.",
+                "ADDRESS": "plac Powstańców Warszawy 9, 00-039 Warszawa, Poland",
+                "DESCRIPTION": "The Prudential skyscraper in flames at the height of the Uprising.",
+                "SOURCE_THEN": "https://www.iwm.org.uk/collections/item/object/205229158",
+                "IMAGE_THEN": "./data/photos/Prudential-then.jpg"
+            },
+            "geometry": {
+                "coordinates": [21.01272326932092, 52.23568294562858],
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Pałac Blanka",
+                "ADDRESS": "Senatorska 14, 00-001 Warszawa, Poland",
+                "DESCRIPTION": "German Army patrol passing through the Marshal Foch Street in the City Centre area (Śródmiescie) of Warsaw during the heavy fighting against the insurgent forces. Ruins of the Blank Palace on the Theatre Square can be seen in the background.",
+                "SOURCE_THEN": "https://www.iwm.org.uk/collections/item/object/205229987",
+                "IMAGE_THEN": "./data/photos/Marshal-Foch-then.jpg"
+            },
+            "geometry": {
+                "coordinates": [21.010559820843444, 52.24485961816414],
+                "type": "Point"
+            }
+        }
+    ]
+}
