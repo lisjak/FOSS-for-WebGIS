@@ -59,9 +59,9 @@
         {
             "type": "Feature",
             "properties": {
-                "NAME": "Solidarnosci Street",
+                "NAME": "Solidarności and Żelazna Streets",
                 "ADDRESS": "Żelazna 84",
-                "DESCRIPTION": "The forced resettlement of Jews from villages and small cities in Warsaw District to the Warsaw ghetto. This photo was taken near the crossing of Zelazna and Solidarnosci streets.",
+                "DESCRIPTION": "The forced resettlement of Jews from villages and small cities in Warsaw District to the Warsaw ghetto. This photo was taken near the crossing of Żelazna and Solidarności streets.",
                 "SOURCE_THEN": "https://www.npr.org/sections/goatsandsoda/2020/09/02/908732924/the-warsaw-ghetto-can-teach-the-world-how-to-beat-back-an-outbreak",
                 "IMAGE_THEN": "./data/photos/Solidarnosci.jpg"
             },
